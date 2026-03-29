@@ -40,16 +40,8 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (e.g. Postman, same-origin server calls)
-      if (!origin) {
-        return callback(null, true);
-      }
-
-      if (ALLOWED_ORIGINS.includes(origin)) {
-        return callback(null, true);
-      }
-
-      return callback(new Error(`CORS blocked for origin: ${origin}`));
+      // Allow all origins for development
+      return callback(null, true);
     },
     credentials: true,
   })
