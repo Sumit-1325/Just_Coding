@@ -175,6 +175,8 @@ export async function register(req, res) {
       success: true,
       message: "User registered successfully",
       data: {
+        accessToken: tokens.accessToken,
+        refreshToken: tokens.refreshToken,
         employee: {
           id: employee.id,
           email: employee.email,
@@ -296,6 +298,8 @@ export async function login(req, res) {
       success: true,
       message: "Login successful",
       data: {
+        accessToken: tokens.accessToken,
+        refreshToken: tokens.refreshToken,
         employee: {
           id: employee.id,
           email: employee.email,

@@ -4,3 +4,4 @@ node_modules
 
 /src/lib/generated/prisma
 Reimbursement management.pdf
+.vercel
